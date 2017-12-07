@@ -2,7 +2,6 @@ var express = require('express');
 var app = express();
 var mongoose = require('mongoose');
 // module for maintaining sessions
-//var prodModel = mongoose.model('Product');
 var session = require('express-session');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
