@@ -1,0 +1,31 @@
+extends mylayout
+
+block content
+  form(method='post', action='http://localhost:3000/users/product/create')
+    legend Create a new product
+    .form-group
+      label(for='prodName') Product Name
+      input.form-control(type='text', name='prodName', value='', placeholder='prodName', autofocus=true)
+    .form-group
+      label(for='price') Price
+      input.form-control(type='text', name='price', value='', placeholder='price')
+    .form-group
+      label(for='ostype') OS type
+      input.form-control(type='text', name='ostype', value='', placeholder='ostype')
+    .form-group
+      label(for='ram') Ram
+      input.form-control(type='text', name='ram', value='', placeholder='ram')
+    .form-group
+      label(for='weight') Weight
+      input.form-control(type='text', name='weight', value='', placeholder='weight')
+    .form-group
+      label(for='colour') Colour
+      input.form-control(type='text', name='colour', value='', placeholder='colour')
+    .form-group
+      label(for='modelNumber') Model Number
+      input.form-control(type='text', name='modelNumber', value='', placeholder='modelNumber')
+    .form-group
+      label(for='features') Special Features
+      input.form-control(type='text', name='allFeatures', value='', placeholder='allFeatures')
+    .form-group
+      button.btn.btn-primary(type='submit') Create product

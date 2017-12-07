@@ -1,0 +1,17 @@
+extends mylayout
+
+doctype html
+html(lang= 'en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    title List of all products
+
+block content
+  h1 Product list
+   p  Below you will see list of all products
+   br
+
+   each product in result 
+    p #{myuser.prodName} 
+

@@ -1,0 +1,25 @@
+doctype html
+html(lang= 'en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    title Dashboard
+
+block content
+  h1= title 
+  
+    p Hi #{myuser.firstName}
+    p Your email is #{myuser.email}
+    p Your mobile number is #{myuser.mobileNumber}
+
+    p
+      a(href='http://localhost:3000/users/products') View all products?
+    p
+      a(href='http://localhost:3000/users/products/:id') View product?
+    p
+      a(href='http://localhost:3000/users/logout') logout
+    p
+      a(href='http://localhost:3000/users/create/screen') Create a new product?
+
+    p
+      a(href='http://localhost:3000/cart/') View Shopping Cart

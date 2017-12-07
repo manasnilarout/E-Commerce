@@ -1,0 +1,21 @@
+extends mylayout
+
+doctype html
+html(lang= 'en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    title View Product
+
+block content
+  h1= title 
+
+    p Hi, Below are the product details:
+    p Name: #{myuser.prodName}
+    p Price: #{myuser.price}
+    p OSType: #{myuser.ostype}
+    p Ram:  #{myuser.ram}
+    p Weight:  #{myuser.weight}
+    p Colour:  #{myuser.colour}
+    p ModelNumber:  #{myuser.modelNumber}
+    p Features: #{myuser.features}
