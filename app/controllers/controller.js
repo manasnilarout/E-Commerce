@@ -144,7 +144,7 @@ app.use('/cart', myRouter);
 module.exports.controllerFunction = function(app) {
 
 myRouter.get('/', function(req, res) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'E-Commerce' });
 });
 
 myRouter.get('/login/screen',function(req,res){
@@ -395,8 +395,7 @@ myRouter.post('/products/:id/delete',function(req,res){
  		}
 
  		else{
-            //var myResponse = responseGenerator.generate(false,"successfully signup user",200,newUser);
-            //res.send(myResponse);
+            
  			      req.session.myuser = newUser;
             delete req.session.myuser.password;
             res.redirect('/users/dashboard')
@@ -428,16 +427,6 @@ myRouter.post('/products/:id/delete',function(req,res){
             if(err){
                 var myResponse = responseGenerator.generate(true,"some error"+err,500,null);
                 res.send(myResponse);
-            }
-            else if(foundUser==null || foundUser==undefined || foundUser.userName==undefined){
-
-                var myResponse = responseGenerator.generate(true,"user not found. Check your email and password",404,null);
-                //res.send(myResponse);
-                res.render('error', {
-                  message: myResponse.message,
-                  error: myResponse.data
-                });
-
             }
             else{
 
