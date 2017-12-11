@@ -1,6 +1,5 @@
 var mongoose = require('mongoose');
 var express  = require('express');
-// express router for defining routes
 var myRouter = express.Router();
 var userModel = mongoose.model('myUser');
 var prodModel = mongoose.model('Product');
@@ -8,8 +7,9 @@ var responseGenerator = require('./../../libs/responseGenerator');
 var authentication = require("./../../middlewares/authentication");
 var _=require('lodash');
 
-//shows the cart to user
 
+
+//shows the cart to user
 exports.controller = function(app){ 
 
   var myResponse;
@@ -18,12 +18,12 @@ exports.controller = function(app){
     userModel.findOne({'email' : req.session.myuser.email},function(err,myuser){
 
       if (err) {
-
+        //handeling the error  
         console.log(err);
         myResponse = responseGenerator.generate(true,"Error : Database Error",500,null);
         res.send(myResponse);
     }
-
+      //checking for invalid case
       if (myuser==""||myuser==null||myuser==undefined) {
 
         myResponse = responseGenerator.generate(false,"No item in cart",200,null);

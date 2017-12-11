@@ -17,10 +17,6 @@ var userSchema = new Schema({
   //cartInfo      : {type:String,default:''},
   resetPasswordToken  : {type:String},
   resetPasswordExpires: {type:Date}
-  //resetPasswordToken  : {type:String},
-  //resetPasswordExpires: {type:Date}
-
-  
 
 });
 
