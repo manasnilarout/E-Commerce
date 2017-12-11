@@ -14,9 +14,6 @@ var userSchema = new Schema({
   email         : {type:String,default:''},
   mobileNumber      : {type:Number,default:''},
   password      : {type:String,default:''},
-  //cartInfo      : {type:String,default:''},
-  resetPasswordToken  : {type:String},
-  resetPasswordExpires: {type:Date}
 
 });
 

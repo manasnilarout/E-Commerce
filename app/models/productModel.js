@@ -2,6 +2,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
+//module for storing and removing selected products from and to the cart
 var productSchema = new Schema({
 
 	prodName 			: {type:String,required:true},
@@ -12,7 +13,6 @@ var productSchema = new Schema({
 	colour				: {type:String,required:true},
 	modelNumber			: {type:Number,required:true},
 	features			: [],
-	//comments			: [],
 	createdon           : {type:Date},
 	
 
